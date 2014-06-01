@@ -1,4 +1,5 @@
 module.exports = function(grunt) {
+	var nodeBin=__dirname + '/node_modules/.bin/';
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -30,9 +31,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('start', 'Start the application', ['supervisor']);
 
 	grunt.registerTask('postinstall','Run post install stuff', ['bower']);
-
-	grunt.registerTask('check','Check if working',function() {
-		grunt.log.writeln("Worked..");
-	});
 }
 
