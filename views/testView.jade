@@ -1,0 +1,39 @@
+extends layouts/main
+
+block head
+	link(rel='stylesheet', href='/less/testView.css', type='text/css')
+
+block body
+	.row
+		- for(var i=1; i<=12; i++) 
+			.small-2.medium-1.column= i
+	.row
+		- for(var i=1; i<=12; i++) 
+			.small-1.column= i
+	.row
+		.small-1.medium-push-10.column 1
+		- for(var i=2; i<=11; i++) 
+			.small-1.medium-pull-1.column= i
+		.small-1.column 12
+	.row
+		.text-center.small-3.small-centered.column 3 Centered
+	.row
+		.small-4.column= p
+		.small-4.column Test
+	.row
+		.small-4.end.column Test End
+		.small-4.end.column Test End
+	form
+		.row.collapse
+			.small-1.medium-offset-1.column
+				label Label
+		.row.collapse
+			.small-12.medium-9.medium-offset-1.column
+				input(type='text', placeholder='Placeholder').radius
+			.small-12.medium-1.end.column
+				a(href='#').button.postfix.radius.changer Clickee
+
+
+
+
+

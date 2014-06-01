@@ -1,0 +1,19 @@
+extends layouts/main
+
+mixin field(name,value)
+	.row.collapse
+		.small-2.column
+			span.prefix.radius= name
+		.small-10.column
+			input(type='text', value= value).radius
+
+block head
+
+block body
+	if thing
+		form
+			+field('Name', thing.name)
+			+field('Number', thing.number)
+			+field('Q Factor', thing.qFactor)
+	else
+		p There is no thing.
