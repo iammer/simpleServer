@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 				options: {
 					targetDir: './bower',
 					cleanTargetDir: true,
-					cleanBowerDir: true,
+					cleanBowerDir: true
 				}
 			}
 		}
