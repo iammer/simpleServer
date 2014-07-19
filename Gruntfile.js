@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 	var nodeBin=__dirname + '/node_modules/.bin/';
 
 	grunt.initConfig({
@@ -31,5 +31,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('start', 'Start the application', ['supervisor']);
 
 	grunt.registerTask('postinstall','Run post install stuff', ['bower']);
-}
+};
 
