@@ -4,19 +4,10 @@ _= require 'underscore'
 coffeescript= require 'connect-coffee-script'
 connectless= require 'connect-less'
 morgan= require 'morgan'
-express= require 'express'
-Datasource= require 'nedb'
+express= require 'express.io'
+session= require 'express-session'
 
-routeLoader= require './src/routeLoader'
-
-db= new Datasource
-	filename: 'simple.nedb'
-
-db.loadDatabase (err) ->
-	if err
-		console.log "Error loading database: #{err}"
-	else
-		console.log "Database loaded"
+loaderLoader= require './src/loaderLoader'
 
 app= express()
 
@@ -36,13 +27,11 @@ app.use connectless
 	dstRoot: __dirname + '/generated/public'
 	debug: true
 
-app.use routeLoader __dirname + '/src/routes',
-	app: app
-	db: db
-
 app.use express.static __dirname + '/public'
 app.use express.static __dirname + '/generated/public'
 app.use express.static __dirname + '/bower'
+
+loaderLoader __dirname + '/src/loaders', app
 
 app.listen 8080
 

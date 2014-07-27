@@ -1,6 +1,6 @@
 express= require 'express'
 
-module.exports= (map) ->
+module.exports= (app) ->
 		router= express.Router()
 		router.get '/', (req,res) ->
 			res.send 'It worked'

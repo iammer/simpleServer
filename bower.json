@@ -5,7 +5,10 @@
 	"dependencies": {
 		"jquery": "latest",
 		"foundation": "latest",
-		"jquery.behavior": "fschaefer/jquery-behavior"
+		"jquery.behavior": "fschaefer/jquery-behavior",
+        "bacon": "latest",
+        "bacon.jquery": "latest",
+        "bacon.model": "latest"
 	},
 	"exportsOverride": {
 		"modernizr": {
