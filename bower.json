@@ -1,32 +1,32 @@
 {
-	"name": "simpleServer",
-	"description": "Simple test server",
-	"version": "0.0.1",
-	"dependencies": {
-		"jquery": "latest",
-		"foundation": "latest",
-		"jquery.behavior": "fschaefer/jquery-behavior",
+    "name": "simpleServer",
+    "description": "Simple test server",
+    "version": "0.0.1",
+    "dependencies": {
+        "jquery": "latest",
+        "foundation": "latest",
+        "jquery.behavior": "fschaefer/jquery-behavior",
         "bacon": "latest",
         "bacon.jquery": "latest",
         "bacon.model": "latest"
-	},
-	"exportsOverride": {
-		"modernizr": {
-			"js": "**/modernizr.js"
-		},
-		"foundation": {
-			"js": "**/*.min.js",
-			"css": "**/*.css"
-		},
-		"jquery": {
-			"js": "dist/jquery.js"
-		},
-		"jquery.*": {
-			"js": "**/*.js"
-		},
-		"*": {
-			"js": "**/*.js",
-			"css": "**/*.css"
-		}
-	}
+    },
+    "exportsOverride": {
+        "modernizr": {
+            "js": "**/modernizr.js"
+        },
+        "foundation": {
+            "js": "**/*.min.js",
+            "css": "**/*.css"
+        },
+        "jquery": {
+            "js": "dist/jquery.js"
+        },
+        "jquery.*": {
+            "js": "**/*.js"
+        },
+        "*": {
+            "js": "**/*.js",
+            "css": "**/*.css"
+        }
+    }
 }

@@ -1,0 +1,30 @@
+extends layouts/main
+
+block head
+	script(src-'/js/jquery.js', type='text/javascript')
+	script(src='/js/bacon/Bacon.min.js', type='text/javascript')
+	script(src='/js/bacon.jquery/bacon.jquery.min.js', type='text/javascript')
+	script(src='/js/bacon.model/bacon.model.min.js', type='text/javascript')
+	script(src='/coffee/soundTest.js', type='text/javascript')
+
+block body
+	.row
+		.column.small-2.small-offset-4
+			#leftHz.range-slider.round.vertical-range(
+				data-slider,
+				data-options='vertical: true; display_selector: #leftDisplay; start: 20; end: 100;'
+			)
+				span.range-slider-handle
+				span.range-slider-active-segment
+				input(type='hidden')
+			#leftDisplay
+		.column.small-2.end
+			#rightHz.range-slider.round.vertical-range(
+				data-slider,
+				data-options='vertical: true; display_selector: #rightDisplay; start: 20; end: 100;'
+			)
+				span.range-slider-handle
+				span.range-slider-active-segment
+				input(type='hidden')
+			#rightDisplay
+

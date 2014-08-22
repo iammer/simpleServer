@@ -1,20 +1,24 @@
 #!/usr/bin/env coffee
 
-_= require 'underscore'
 coffeescript= require 'connect-coffee-script'
 connectless= require 'connect-less'
 morgan= require 'morgan'
-express= require 'express.io'
+express= require 'express'
+socketio= require 'socket.io'
 session= require 'express-session'
+http= require 'http'
+
+app= express()
+server= http.Server(app)
+io= socketio(server)
 
 loaderLoader= require './src/loaderLoader'
 
-app= express()
-
+app.set 'io', io
 app.set 'views', __dirname + '/views'
 app.set 'view engine', 'jade'
 
-app.use morgan()
+app.use morgan 'combined'
 
 app.use coffeescript
 	src: __dirname + '/src/client/coffee'
@@ -33,6 +37,6 @@ app.use express.static __dirname + '/bower'
 
 loaderLoader __dirname + '/src/loaders', app
 
-app.listen 8080
+server.listen 8080
 
 console.log 'Started...'
