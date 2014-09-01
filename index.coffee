@@ -38,7 +38,13 @@ app.use '/ember', ember
 		"/js/jquery/jquery.js",
 		"/js/handlebars/handlebars.min.js",
 		"/js/ember/ember.min.js",
-		"/js/ember-data/ember-data.min.js"
+		"/js/ember-data/ember-data.min.js",
+		"/js/modernizr/modernizr.js",
+		"/js/foundation/foundation.min.js"
+	],
+	stylesheets: [
+		'/css/foundation/normalize.css',
+		'/css/foundation/foundation.css'
 	]
 
 app.use express.static __dirname + '/public'
