@@ -1,0 +1,54 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'show', 'emberjs' ]
+2 info using npm@1.4.9
+3 info using node@v0.10.28
+4 verbose node symlink /usr/bin/node
+5 verbose url raw emberjs
+6 verbose url resolving [ 'https://registry.npmjs.org/', './emberjs' ]
+7 verbose url resolved https://registry.npmjs.org/emberjs
+8 info trying registry request attempt 1 at 18:56:04
+9 http GET https://registry.npmjs.org/emberjs
+10 http 404 https://registry.npmjs.org/emberjs
+11 verbose headers { date: 'Sun, 31 Aug 2014 22:56:04 GMT',
+11 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+11 verbose headers   'content-type': 'application/json',
+11 verbose headers   'cache-control': 'max-age=0',
+11 verbose headers   'content-length': '52',
+11 verbose headers   'accept-ranges': 'bytes',
+11 verbose headers   via: '1.1 varnish',
+11 verbose headers   age: '0',
+11 verbose headers   'x-served-by': 'cache-sjc3132-SJC',
+11 verbose headers   'x-cache': 'MISS',
+11 verbose headers   'x-cache-hits': '0',
+11 verbose headers   'x-timer': 'S1409525764.335601,VS0,VE384',
+11 verbose headers   'keep-alive': 'timeout=10, max=50',
+11 verbose headers   connection: 'Keep-Alive' }
+12 silly registry.get cb [ 404,
+12 silly registry.get   { date: 'Sun, 31 Aug 2014 22:56:04 GMT',
+12 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+12 silly registry.get     'content-type': 'application/json',
+12 silly registry.get     'cache-control': 'max-age=0',
+12 silly registry.get     'content-length': '52',
+12 silly registry.get     'accept-ranges': 'bytes',
+12 silly registry.get     via: '1.1 varnish',
+12 silly registry.get     age: '0',
+12 silly registry.get     'x-served-by': 'cache-sjc3132-SJC',
+12 silly registry.get     'x-cache': 'MISS',
+12 silly registry.get     'x-cache-hits': '0',
+12 silly registry.get     'x-timer': 'S1409525764.335601,VS0,VE384',
+12 silly registry.get     'keep-alive': 'timeout=10, max=50',
+12 silly registry.get     connection: 'Keep-Alive' } ]
+13 error 404 404 Not Found: emberjs
+13 error 404
+13 error 404 'emberjs' is not in the npm registry.
+13 error 404 You should bug the author to publish it
+13 error 404
+13 error 404 Note that you can also install from a
+13 error 404 tarball, folder, or http url, or git url.
+14 error System Linux 2.6.32-042stab083.2
+15 error command "/usr/bin/node" "/usr/bin/npm" "show" "emberjs"
+16 error cwd /home/michael/node/ember/simpleServer/src/client/ember/templates
+17 error node -v v0.10.28
+18 error npm -v 1.4.9
+19 error code E404
+20 verbose exit [ 1, true ]

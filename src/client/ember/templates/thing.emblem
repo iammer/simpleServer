@@ -1,0 +1,6 @@
+			ul
+				each
+					li
+						label = name
+						input.toggle type='textbox' value=value
+						div #{name} #{value}

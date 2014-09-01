@@ -7,6 +7,7 @@ express= require 'express'
 socketio= require 'socket.io'
 session= require 'express-session'
 http= require 'http'
+ember= require 'ember-connect-middleware'
 
 app= express()
 server= http.Server(app)
@@ -30,6 +31,15 @@ app.use connectless
 	dst: __dirname + '/generated/public/less'
 	dstRoot: __dirname + '/generated/public'
 	debug: true
+
+app.use '/ember', ember
+	path: __dirname + '/src/client/ember'
+	scripts: [
+		"/js/jquery/jquery.js",
+		"/js/handlebars/handlebars.min.js",
+		"/js/ember/ember.min.js",
+		"/js/ember-data/ember-data.min.js"
+	]
 
 app.use express.static __dirname + '/public'
 app.use express.static __dirname + '/generated/public'
