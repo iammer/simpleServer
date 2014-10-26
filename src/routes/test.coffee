@@ -14,6 +14,9 @@ module.exports= (app) ->
 				pageTitle: 'Test View'
 				p: req.params.p
 
+		router.get '/:view', (req, res) ->
+			res.render req.params.view
+
 		router
 
 
